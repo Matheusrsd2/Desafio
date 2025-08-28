@@ -27,20 +27,14 @@ export class NovaDividaComponent {
   constructor(private tituloService: TituloService, private router: Router) {}
   
   salvar() {
-    this.tituloService.cadastrarTitulo(this.titulo).subscribe({
-      next: () => {
-        alert('Dívida cadastrada com sucesso!');
-        // Fecha o modal manualmente
-        const modalEl = document.getElementById('novaDividaModal');
-        const modal = bootstrap.Modal.getInstance(modalEl!);
-        modal?.hide();
-
-        // Reset form
-        this.titulo = { numero: null, devedor: '', cpf: '', juros: null, multa: null, parcelas: [] };
-      },
-      error: err => console.error(err)
-    });
-  }
+  this.tituloService.cadastrarTitulo(this.titulo).subscribe({
+    next: (res) => {
+      console.log('Título cadastrado:', res);
+      this.router.navigate(['/']);
+    },
+    error: (err) => console.error('Erro ao cadastrar título', err)
+  });
+}
 
   adicionarParcela() {
     this.titulo.parcelas.push({ numero: this.titulo.parcelas.length + 1, valorParcela: 0, vencimento: '', diasAtraso: 0 });

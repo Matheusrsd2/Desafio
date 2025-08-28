@@ -8,7 +8,7 @@ import { TituloService } from '../services/Titulo.service';
 })
 export class HomeComponent implements OnInit {
 
-  titulos: any[] = []; // Agora espelha o model Titulo do backend
+  titulos: any[] = []; 
 
   constructor(private tituloService: TituloService) { }
 
