@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Backend.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Backend.IntegrationTests", "Desafio.Backend.IntegrationTests\Desafio.Backend.IntegrationTests.csproj", "{8F69B4C9-0897-423D-8D12-E3D345B2BDB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Backend.UnitTests", "..\..\..\Desafio\Desafio.Backend\Desafio.Backend.UnitTests\Desafio.Backend.UnitTests.csproj", "{06F14329-431C-4708-BA6B-0F839C5E5568}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Backend.UnitTests", "Desafio.Backend.UnitTests\Desafio.Backend.UnitTests.csproj", "{969A022E-6DA6-979B-1CA1-EA3AC7FE8AE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{8F69B4C9-0897-423D-8D12-E3D345B2BDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F69B4C9-0897-423D-8D12-E3D345B2BDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F69B4C9-0897-423D-8D12-E3D345B2BDB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06F14329-431C-4708-BA6B-0F839C5E5568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06F14329-431C-4708-BA6B-0F839C5E5568}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06F14329-431C-4708-BA6B-0F839C5E5568}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06F14329-431C-4708-BA6B-0F839C5E5568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969A022E-6DA6-979B-1CA1-EA3AC7FE8AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969A022E-6DA6-979B-1CA1-EA3AC7FE8AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969A022E-6DA6-979B-1CA1-EA3AC7FE8AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969A022E-6DA6-979B-1CA1-EA3AC7FE8AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

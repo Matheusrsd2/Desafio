@@ -43,7 +43,7 @@ namespace Desafio.Backend.xUnit
 
             var titulo = new Titulo
             {
-                Numero = 1,
+                Numero = "1",
                 Devedor = "João da Silva",
                 CPF = "12345678900",
                 ValorOriginal = 1000,
