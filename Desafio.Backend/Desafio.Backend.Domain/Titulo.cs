@@ -4,7 +4,7 @@
     {
         private string _devedor = string.Empty;
         private string _cpf = string.Empty;
-        public int Numero { get; set; }
+        public string Numero { get; set; }
         public string Devedor
         {
             get => _devedor;
@@ -33,12 +33,11 @@
         public List<Parcela> Parcelas { get; set; } = new ();
 
         public List<Titulo> CalcularDividaTitulo(List<Titulo> listaTitulos)
-        {
-            decimal somaValorOriginal = 0;
-            decimal vlrJurosParcelas = 0;
+        {        
             foreach (var titulo in listaTitulos)
             {
-
+                decimal somaValorOriginal = 0;
+                decimal vlrJurosParcelas = 0;
                 foreach (var parcela in titulo.Parcelas)
                 {
                     DateTime dataAtual = DateTime.Now.Date;

@@ -10,7 +10,7 @@ namespace Desafio.Backend.Application
         {
             new Titulo
             {
-                Numero = 12345,
+                Numero = "12345",
                 Devedor = "João da Silva",
                 CPF = "123.456.789-00",
                 Juros = 1,
@@ -24,7 +24,7 @@ namespace Desafio.Backend.Application
             },            
             new Titulo
             {
-                Numero = 67890,
+                Numero = "67890",
                 Devedor = "Maria Oliveira",
                 CPF = "987.654.321-00",
                 Juros = 2,

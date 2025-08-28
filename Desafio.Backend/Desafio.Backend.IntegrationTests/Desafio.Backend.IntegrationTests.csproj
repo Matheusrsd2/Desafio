@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Desafio.Backend.API\Desafio.Backend.API.csproj" />
   </ItemGroup>
 
+
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
