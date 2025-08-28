@@ -1,0 +1,57 @@
+<div class="container mt-5">
+
+  <div class="text-center mb-4">
+    <h1>TÍTULOS</h1>
+    <a class="btn btn-primary mt-2" routerLink="/nova-divida">+ Novo Título</a>
+  </div>
+
+  <!-- Mensagem caso não haja títulos -->
+  <div *ngIf="titulos.length === 0" class="alert alert-info text-center">
+    Sem Títulos Disponíveis para Visualização
+  </div>
+
+  <!-- Lista de títulos -->
+  <div class="row justify-content-center" *ngIf="titulos.length > 0">
+    <div class="col-md-6 col-lg-6 mb-4" *ngFor="let titulo of titulos">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Título #{{ titulo.numero }}</h5>
+          <p class="card-text"><strong>Devedor:</strong> {{ titulo.devedor }}</p>
+          <p class="card-text"><strong>CPF:</strong> {{ titulo.cpf }}</p>
+          <p class="card-text"><strong>Valor Original:</strong> R$ {{ titulo.valorOriginal }}</p>
+          <p class="card-text"><strong>Valor Atualizado:</strong> R$ {{ titulo.valorAtualizado }}</p>
+          <p class="card-text"><strong>Juros:</strong> {{ titulo.juros }}% ao mês</p>
+          <p class="card-text"><strong>Multa:</strong> {{ titulo.multa }}%</p>
+
+          <hr>
+
+          <h6>Quantidade de Parcelas: {{ titulo.parcelas.length }}</h6>
+
+          <!-- Tabela de parcelas -->
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="table-light">
+                <tr>
+                  <th>Número</th>
+                  <th>Valor Parcela</th>
+                  <th>Vencimento</th>
+                  <th>Dias de Atraso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let parcela of titulo.parcelas">
+                  <td>{{ parcela.numero }}</td>
+                  <td>R$ {{ parcela.valorParcela }}</td>
+                  <td>{{ parcela.vencimento | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ parcela.diasAtraso }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

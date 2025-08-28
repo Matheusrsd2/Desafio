@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <h1>Cadastrar Novo Título</h1>
+
+  <form #formTitulo="ngForm" (ngSubmit)="salvar()">
+
+    <!-- Dados do título -->
+    <div class="mb-3">
+      <label class="form-label">Número do Título:</label>
+      <input type="text" class="form-control" [(ngModel)]="titulo.numero" name="numero" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nome do Devedor:</label>
+      <input type="text" class="form-control" [(ngModel)]="titulo.devedor" name="devedor" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">CPF do Devedor:</label>
+      <input type="text" class="form-control" [(ngModel)]="titulo.cpf" name="cpf" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">% Juros:</label>
+      <input type="number" class="form-control" [(ngModel)]="titulo.juros" name="juros" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">% Multa:</label>
+      <input type="number" class="form-control" [(ngModel)]="titulo.multa" name="multa" />
+    </div>
+
+    <!-- Parcelas -->
+    <h2>Parcelas</h2>
+
+    <div *ngFor="let parcela of titulo.parcelas; let i = index" class="border p-3 mb-3 rounded">
+      <h5>Parcela {{ i + 1 }}</h5>
+
+      <div class="mb-2">
+        <label class="form-label">Número da Parcela:</label>
+        <input type="number" class="form-control" [(ngModel)]="parcela.numero" name="numero{{i}}" required />
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label">Valor da Parcela:</label>
+        <input type="number" class="form-control" [(ngModel)]="parcela.valorParcela" name="valorParcela{{i}}" required />
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label">Data de Vencimento:</label>
+        <input type="date" class="form-control" [(ngModel)]="parcela.vencimento" name="vencimento{{i}}" required />
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary mb-3" (click)="adicionarParcela()">+ Adicionar Parcela</button>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar</button>
+
+  </form>
+</div>

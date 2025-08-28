@@ -1,0 +1,63 @@
+# ==========================
+# Node / Angular
+# ==========================
+node_modules/
+dist/
+out-tsc/
+tmp/
+temp/
+.angular/
+.angular-cache/
+package-lock.json
+npm-debug.log
+yarn-error.log
+.vscode/
+
+# Logs
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# ==========================
+# .NET / C#
+# ==========================
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+
+# Rider files
+.idea/
+
+# ASP.NET
+wwwroot/
+appsettings*.json
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish
+*.Publish.xml
+*.publishsettings
+
+# ==========================
+# Others
+# ==========================
+*.swp
+*.tmp
+*.bak
+*.cache
